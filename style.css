@@ -42,6 +42,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 30px 0;
 }
 
 .modal {
@@ -74,6 +75,10 @@ body {
 }
 .img_card {
   cursor: pointer;
+}
+.img_card img {
+  object-fit: cover;
+  width: 100%;
 }
 
 .modal_step_actions {
@@ -247,6 +252,46 @@ body {
 .img_card img {
   width: 100%;
 }
+@media (max-height: 600px) {
+  .modal {
+    padding: 13px;
+  }
+  .modal_title,
+  .img_cards,
+  .message_card,
+  .modal_text textarea {
+    margin-bottom: 15px;
+  }
+  .img_card img {
+    max-height: 150px;
+  }
+  .exit_icon {
+    top: 15px;
+    right: 15px;
+  }
+  .modal_text textarea {
+    height: 250px;
+  }
+  .message_card img {
+    max-height: 130px;
+    object-fit: cover;
+  }
+  .btn {
+    height: 35px;
+    padding: 0 30px;
+  }
+  .modal_title h2 {
+    font-size: 23px;
+    line-height: 100%;
+  }
+  .product_card img {
+    max-height: 130px;
+    object-fit: cover;
+  }
+  .modal_title p {
+    font-size: 13px;
+  }
+}
 
 @media only screen and (max-width: 750px) {
   .overlay {
@@ -254,8 +299,8 @@ body {
   }
 
   .modal {
- padding: 20px;
- padding-top: 30px;
+    padding: 20px;
+    padding-top: 30px;
   }
   .single_btn {
     width: 100%;
@@ -296,6 +341,6 @@ body {
   }
 
   .product_cards .product_card:last-child {
-   display: none;
+    display: none;
   }
 }
