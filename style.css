@@ -262,8 +262,10 @@ body {
   .modal_text textarea {
     margin-bottom: 15px;
   }
-  .img_card img {
-    max-height: 150px;
+  .img_cards {
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 15px;
   }
   .exit_icon {
     top: 15px;
