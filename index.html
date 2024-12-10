@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bagisto</title>
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </head>
   <body>
     <div class="overlay">
@@ -86,24 +91,69 @@
             <p>You might also like these products!</p>
           </div>
 
-          <div class="product_cards">
-            <div class="product_card">
-              <img src="./assets/images/p-card-1.png" alt="" />
-              <p>Vase</p>
-              <p>$16.00</p>
-              <button class="btn card_btn">ADD TO CART</button>
+          <div class="carousel">
+          <div class="swiper-wrapper ">
+            <div class="swiper-slide">
+              <div class="product_card">
+                <img src="./assets/images/p-card-1.png" alt="" />
+                <p>Vase</p>
+                <p>$16.00</p>
+                <button class="btn card_btn">ADD TO CART</button>
+              </div>
             </div>
-            <div class="product_card">
-              <img src="./assets/images/p-card-2.png" alt="" />
-              <p>Polaroid photo</p>
-              <p>$16.00</p>
-              <button class="btn card_btn">ADD TO CART</button>
+            <div class="swiper-slide">
+              <div class="product_card">
+                <img src="./assets/images/p-card-2.png" alt="" />
+                <p>Polaroid photo</p>
+                <p>$16.00</p>
+                <button class="btn card_btn">ADD TO CART</button>
+              </div>
             </div>
-            <div class="product_card">
-              <img src="./assets/images/p-card-3.png" alt="" />
-              <p>Pruner for bouquets</p>
-              <p>$16.00</p>
-              <button class="btn card_btn">ADD TO CART</button>
+            <div class="swiper-slide">
+              <div class="product_card">
+                <img src="./assets/images/p-card-3.png" alt="" />
+                <p>Pruner for bouquets</p>
+                <p>$16.00</p>
+                <button class="btn card_btn">ADD TO CART</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product_card">
+                <img src="./assets/images/p-card-1.png" alt="" />
+                <p>Vase</p>
+                <p>$16.00</p>
+                <button class="btn card_btn">ADD TO CART</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product_card">
+                <img src="./assets/images/p-card-2.png" alt="" />
+                <p>Polaroid photo</p>
+                <p>$16.00</p>
+                <button class="btn card_btn">ADD TO CART</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product_card">
+                <img src="./assets/images/p-card-3.png" alt="" />
+                <p>Pruner for bouquets</p>
+                <p>$16.00</p>
+                <button class="btn card_btn">ADD TO CART</button>
+              </div>
+            </div>
+          </div></div>
+
+          <div class="car_arrows_wrapper_container">
+            <div class="car_arrows_wrapper">
+              <div class="car_arrows">
+                <div class="car_arrow car_left">
+                  <img src="./assets/images/left-arrow.svg" alt="" />
+                </div>
+                <div class="car_arrow car_right">
+                  <img src="./assets/images/right-arrow.svg" alt="" />
+                </div>
+              </div>
+              <p>swipe to see more</p>
             </div>
           </div>
 
@@ -116,5 +166,30 @@
     </div>
 
     <script src="./scritps.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const swiper = new Swiper(".carousel", {
+          loop: false,
+          spaceBetween: 23,
+          slidesPerView: 3,
+          navigation: {
+            nextEl: ".car_right",
+            prevEl: ".car_left",
+          },
+
+          breakpoints: {
+            350: {
+              slidesPerView: 2,
+              spaceBetween: 10,
+            },
+            640: {
+              slidesPerView: 3,
+              spaceBetween: 23,
+            },
+         
+          },
+        });
+      });
+    </script>
   </body>
 </html>
